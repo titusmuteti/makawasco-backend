@@ -46,6 +46,8 @@ group :development do
   # gem "spring"
 end
 
+gem 'active_model_serializers'
+
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 
 group :development, :test do

@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  consumption: 1
+  rate_applied: 1
+  amount: 9.99
+  balance: 9.99
+  bill_date: MyString
+  from: MyString
+  to: MyString
+  due_date: MyString
+  paid: MyString
+
+two:
+  consumption: 1
+  rate_applied: 1
+  amount: 9.99
+  balance: 9.99
+  bill_date: MyString
+  from: MyString
+  to: MyString
+  due_date: MyString
+  paid: MyString

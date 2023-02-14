@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require 'faker'
+puts "🌱 Seeding..."
+
+Client.create!([
+    {
+        firstname: "John",
+        # lastname: "Nzuki",
+        email: "john@example.com",
+        phone_number: "0712345678"
+    }
+])
+
+puts "✅ Done seeding!"
