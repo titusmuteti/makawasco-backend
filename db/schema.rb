@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_14_062454) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_14_085253) do
   create_table "bills", force: :cascade do |t|
     t.integer "consumption"
     t.integer "rate_applied"
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_062454) do
     t.string "paid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "client_id"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -33,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_062454) do
     t.integer "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "premise_id"
   end
 
   create_table "employees", force: :cascade do |t|
