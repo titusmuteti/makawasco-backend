@@ -4,13 +4,13 @@ class ClientsController < ApplicationController
 
         def index
             clients = Client.all
-            render json: clients, include: [:service, :bills],  status: :ok
+            render json: clients, include: [:bills, :employees],  status: :ok
         end
     
         def show
             client = Client.find_by_id(session[:client_id])
             if client
-                render json: client, include: [:service, :bills, :employees, premises], status: :ok
+                render json: client, include: [:bills, :employees], status: :ok
             else
                 render json: {error: "You must be logged in to access this content"}, status: :unauthorized
             end
