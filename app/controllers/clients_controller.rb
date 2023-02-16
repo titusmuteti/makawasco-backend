@@ -19,7 +19,7 @@ class ClientsController < ApplicationController
     
         def create
             byebug
-            client = Client.create!(user_params)
+            client = Client.create!(client_params)
             if client.save
             # UserNotifierMailer.send_signup_email(@user).deliver
                 session[:client_id] = client.id
@@ -32,7 +32,7 @@ class ClientsController < ApplicationController
     
         def update
             client = Client.find_by(params[:id])
-            client.update!(user_params)
+            client.update!(client_params)
             render json: client , status: :ok
         end
     
