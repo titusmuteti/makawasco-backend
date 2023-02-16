@@ -1,7 +1,7 @@
 class Client < ApplicationRecord
-    has_many :sevices
+    has_many :services
     has_many :bills
-    has_many :employees, through: :service
+    has_many :employees, through: :services
     # belongs_to :premise
 
     validates :firstname, presence: true

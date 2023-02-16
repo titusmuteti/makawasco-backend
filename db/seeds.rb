@@ -246,4 +246,43 @@ Bill.create([
     },
 ])
 
+Service.create([
+    {
+        client_id: 1,
+        premise_id: 4,
+        created_on: "thursday",
+        resolved_on: "friday",
+        # assigned_to: "morris obama",
+        remarks: "Great service",
+        employee_id: 1,
+    },
+    {
+        client_id: 4,
+        premise_id: 3,
+        created_on: "monday",
+        resolved_on: "thursday",
+        # assigned_to: "morris obama",
+        remarks: "Great service",
+        employee_id: 4,
+    },
+    {
+        client_id: 10,
+        premise_id: 1,
+        created_on: "thursday",
+        resolved_on: "friday",
+        # assigned_to: "morris obama",
+        remarks: "Great service",
+        employee_id: 2,
+    },
+    {
+        client_id: 1,
+        premise_id: 4,
+        created_on: "thursday",
+        resolved_on: "friday",
+        # assigned_to: "morris obama",
+        remarks: "on time response",
+        employee_id: 4,
+    },
+])
+
 puts "✅ Done seeding!"
