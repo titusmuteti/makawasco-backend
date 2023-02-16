@@ -1,5 +1,5 @@
 class ClientSerializer < ActiveModel::Serializer
-  attributes :id, :firstname, :email, :phone_number
+  attributes :id, :firstname, :email, :phone_number, :password, :confirm_password
 
   has_many :services
   has_many :bills
