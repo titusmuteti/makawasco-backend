@@ -18,6 +18,7 @@ class ClientsController < ApplicationController
         end
     
         def create
+            byebug
             client = Client.create!(user_params)
             if client.save
             # UserNotifierMailer.send_signup_email(@user).deliver
