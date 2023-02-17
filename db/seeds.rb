@@ -14,6 +14,8 @@ Client.create([
         firstname: "John",
         # lastname: "Nzuki",
         email: "john@example.com",
+        password: "123456789",
+        confirm_password: "123456789",
         phone_number: "0712345678",
         premise_id: 1
     },
@@ -21,6 +23,8 @@ Client.create([
         firstname: "Martha",
         # lastname: "John",
         email: "martha@example.com",
+        password: "12346789",
+        confirm_password: "12346789",
         phone_number: "0712345678",
         premise_id: 10
     },
@@ -28,6 +32,8 @@ Client.create([
         firstname: "Annita",
         # lastname: "Ray",
         email: "annita@example.com",
+        password: "123456789",
+        confirm_password: "123456789",
         phone_number: "0712345678",
         premise_id: 5
     },
@@ -35,6 +41,8 @@ Client.create([
         firstname: "Caleb",
         # lastname: "Kositany",
         email: "caleb@example.com",
+        password: "123456789",
+        confirm_password: "123456789",
         phone_number: "0712345678",
         premise_id: 2
     },
@@ -42,6 +50,8 @@ Client.create([
         firstname: "Mark",
         # lastname: "Mutiso",
         email: "mark@example.com",
+        password: "123456789",
+        confirm_password: "123456789",
         phone_number: "0712345678",
         premise_id: 4
     },
@@ -49,6 +59,8 @@ Client.create([
         firstname: "Edward",
         # lastname: "Mwendwa",
         email: "edward@example.com",
+        password: "123456789",
+        confirm_password: "123456789",
         phone_number: "0712345678",
         premise_id: 3
     },
@@ -56,6 +68,8 @@ Client.create([
         firstname: "Antony",
         # lastname: "Greenword",
         email: "antony@example.com",
+        password: "123456789",
+        confirm_password: "123456789",
         phone_number: "0712345678",
         premise_id: 6
     },
@@ -63,6 +77,8 @@ Client.create([
         firstname: "Mercy",
         # lastname: "Mwende",
         email: "mwende@example.com",
+        password: "123456789",
+        confirm_password: "123456789",
         phone_number: "0712345678",
         premise_id: 7
     },
@@ -70,6 +86,8 @@ Client.create([
         firstname: "Gersmain",
         # lastname: "Onyancha",
         email: "gersmain@example.com",
+        password: "123456789",
+        confirm_password: "123456789",
         phone_number: "0712345678",
         premise_id: 8
     },
@@ -77,6 +95,8 @@ Client.create([
         firstname: "Masila",
         # lastname: "Muoki",
         email: "masila@example.com",
+        password: "123456789",
+        confirm_password: "123456789",
         phone_number: "0712345678",
         premise_id: 9
     }
@@ -145,7 +165,7 @@ Premise.create([
     },
 ])
 
-Employee.create([
+Employee.create!([
     {
         firstname: "David",
         lastname: "Mutembei",
@@ -183,7 +203,7 @@ Employee.create([
     },
 ])
 
-Bill.create([
+Bill.create!([
     {
         consumption: 5,
         rate_applied: 1,

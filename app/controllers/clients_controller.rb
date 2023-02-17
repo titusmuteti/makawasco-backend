@@ -19,13 +19,13 @@ class ClientsController < ApplicationController
     
         def create
             byebug
-            client = Client.create!(client_params)
-            if client.save
-            # UserNotifierMailer.send_signup_email(@user).deliver
+            client = Client.create(client_params)
+            if client.valid?
+                byebug
                 session[:client_id] = client.id
                 render json: client, status: :created
             else
-                render :action => 'new'
+                render json: { errors: client.errors.full_messages }, status: :unprocessable_entity
             end
     
         end
@@ -45,7 +45,7 @@ class ClientsController < ApplicationController
         private
     
         def client_params
-            params.permit(:firstname, :lastname, :email, :password, :password_confirmation, :phone_number, :premise_id)
+            params.permit(:firstname, :lastname, :email, :phone_number, :password, :password_confirmation)
         end
     
         def record_invalid
