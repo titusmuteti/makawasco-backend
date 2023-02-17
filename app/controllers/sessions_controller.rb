@@ -2,13 +2,14 @@ class SessionsController < ApplicationController
         # skip_before_action :authorize, only: :create
 
         def create
-            byebug
+            # byebug
             user = Client.find_by(email: params[:email])
-            if user && user.authenticate(params[:password])
-                session[:user_id] = user.id
+            if user&.authenticate(params[:password])
+                # byebug
+                session[:user_id] = user.id 
                 render json: user, status: :created
             else
-                render json: {error: "Invalid username or password"}, status: :unauthorized
+                render json: { error: "Invalid email or password!"}, status: :unauthorized
             end
         end
     
